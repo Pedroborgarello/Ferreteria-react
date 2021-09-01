@@ -2,23 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap');
 
 body {
-  font-family: 'Teko', sans-serif;
+  	font-family: 'Teko', sans-serif;
 }
 
 .navBar{
-  text-transform: uppercase;
-  font-size: 1.6rem;
+  	text-transform: uppercase;
+  	font-size: 1.6rem;
 }
 
 .navTitle{
-  font-size: 2.6rem;
-  color: rgb(240, 229, 12) !important;
+  	font-size: 2.6rem;
+  	color: rgb(240, 229, 12) !important;
 }
 
 .linksNav{
-  color: rgb(174, 165, 2) !important;
+  	color: rgb(174, 165, 2) !important;
 }
 
 .linksNav:hover{
-  color: rgb(222, 211, 0) !important;
+  	color: rgb(222, 211, 0) !important;
+}
+
+.cartWidget{
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.cartWidget:hover{
+    transform: scale(1.03);
 }
