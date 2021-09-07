@@ -4,11 +4,16 @@ export const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial);
     
     const disminuirCount = () => {
-        setCount(count - 1);
+        if (count > 1) {
+            setCount(count - 1);
+        }
     }
 
     const aumentarCount = () => {
-        setCount(count + 1);
+        if (count < stock) {
+            setCount(count + 1);
+        }
+        
     }
 
     const agregarCarrito = () => {
