@@ -5,9 +5,10 @@ import { ItemListContainer } from './components/ItemListContainer';
 
 
 
+
 function App(){
 	
-	const greeting = 'Bienvenido a tu ferretería online'
+	const greeting = 'Bienvenido a tu ferretería online';
 
 	return (
     	<div>
