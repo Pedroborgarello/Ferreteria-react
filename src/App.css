@@ -97,3 +97,44 @@ body {
 .itemCount button:hover{
     background-color: rgb(218, 218, 218);
 }
+
+.cardProducto{
+    width: 240px;
+    height: 380px;
+    background-color: rgb(220, 220, 220);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    border-radius: 5px;
+    border: solid 1px rgb(150, 150, 150);
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.cardProducto:hover {
+    box-shadow: 1px 1px 10px 1px rgb(200, 200, 200);
+}
+
+.cardImage {
+    width: 210px;
+    border-radius: 5px;
+}
+
+.cardFooter{
+    font-size: 25px;
+}
+
+.cardFooter button {
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: solid 1px rgb(150, 150, 150);
+    background-color: rgb(220, 220, 220);
+    transition: 0.3s;
+}
+
+.cardFooter button:hover {
+    background-color: rgb(150, 150, 150);
+}
