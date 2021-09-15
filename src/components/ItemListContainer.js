@@ -24,7 +24,9 @@ export const ItemListContainer = ({greeting}) => {
     return (
         <div>
             <h1>{greeting}</h1>
-            { loading ? <h2>Cargando..</h2> : <ItemList productos={productos} />}
+            <div className='productosContainer'>
+                { loading ? <h2>Cargando..</h2> : <ItemList productos={productos} />}
+            </div>
             <ItemCount stock={7} initial={1} onAdd={onAdd}/>
         </div>
     );

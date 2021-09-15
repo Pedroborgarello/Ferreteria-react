@@ -15,3 +15,11 @@ export const getFetch = new Promise ((res) => {
 
 })
 
+const producto = { id: 1, image: 'assets/images/amoladora-makita.jpg', nombre: 'Amoladora', precio: 4000 };
+
+export const getFetchProducto = new Promise ((res) => {
+
+    setTimeout(() => {
+        res(producto)
+    }, 2000)
+})

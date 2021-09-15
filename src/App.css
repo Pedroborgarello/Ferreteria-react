@@ -20,7 +20,7 @@ body {
 }
 
 .linksNav:hover{
-  	color: rgb(222, 211, 0) !important;
+  	color: rgb(222, 211, 12) !important;
 }
 
 .cartWidget{
@@ -31,6 +31,12 @@ body {
 
 .cartWidget:hover{
     transform: scale(1.03);
+}
+
+.productosContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .itemCount{
@@ -101,21 +107,23 @@ body {
 .cardProducto{
     width: 240px;
     height: 380px;
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(33, 37, 41);
+    color: rgb(222, 211, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 15px;
     border-radius: 5px;
-    border: solid 1px rgb(150, 150, 150);
+    border: solid 1px rgb(222, 211, 0);
     text-transform: uppercase;
     text-align: center;
     transition: 0.2s;
 }
 
 .cardProducto:hover {
-    box-shadow: 1px 1px 10px 1px rgb(200, 200, 200);
+    box-shadow: 1px 1px 10px 1px rgb(100, 100, 100);
+    /* transform: scale(1.005); */
 }
 
 .cardImage {
@@ -129,12 +137,15 @@ body {
 
 .cardFooter button {
     text-transform: uppercase;
+    color: rgb(174, 165, 2);
     border-radius: 5px;
-    border: solid 1px rgb(150, 150, 150);
-    background-color: rgb(220, 220, 220);
+    border: solid 1px rgb(174, 165, 2);
+    background-color: rgb(33, 37, 41);
     transition: 0.3s;
 }
 
 .cardFooter button:hover {
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(47, 50, 53);
+    border: solid 1px rgb(222, 211, 0);
+    color: rgb(222, 211, 0);
 }
