@@ -3,10 +3,13 @@
 export const ItemDetail = ({producto}) => {
 
     return (
-        <>
-            <p>{producto.id}</p>
-            <p>{producto.nombre}</p>
-            <p>{producto.precio}</p>
-        </>
+        <div key={producto.id} className='cardProducto'>
+            <img className='cardImage' src={producto.image} alt='imagen' />
+            <div className='cardFooter'>
+                <p>{producto.nombre}</p>
+                <p>${producto.precio}</p>
+                <button>detalles</button>
+            </div>
+        </div>
     )
 }
