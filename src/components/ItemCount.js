@@ -22,7 +22,6 @@ export const ItemCount = ({stock, initial, onAdd}) => {
 
     return (
         <div className="itemCount">
-            <p>Amoladora</p>
             <div className="divCantidad">
                 <span onClick={disminuirCount} className="disminuirItem">-</span><span className="cantidadItem">{count}</span><span onClick={aumentarCount} className="aumentarItem">+</span>
             </div>

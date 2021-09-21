@@ -1,19 +1,34 @@
 import { useEffect, useState } from "react"
-import { getFetchProducto } from "../utils/Mock"
+import { useParams } from "react-router-dom"
+import { getFetch } from "../utils/Mock"
 import { ItemDetail } from "./ItemDetail"
+ 
 
 
 export const ItemDetailContainer = () => {
-    const [producto, setProdcuto] = useState({})
+    const [productos, setProductos] = useState([])
+    const { idProducto } = useParams();
 
     useEffect(() => {
-        getFetchProducto
-        .then(res => setProdcuto(res))
-    }, [])
+        
+        if (idProducto) {
+            getFetch
+                .then(res => {
+                    setProductos(res.filter((producto) => producto.id === idProducto))
+                })
+                .catch(err => console.log(err))
+        } else {
+            getFetch
+                .then(res => {
+                    setProductos(res)
+                })
+                .catch(err => console.log(err))
+        }
+    }, [idProducto])
 
     return (
         <>
-            <ItemDetail producto={producto} />
+            <ItemDetail productos={productos} />
         </>
     )
 }
