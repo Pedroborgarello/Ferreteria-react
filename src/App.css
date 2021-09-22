@@ -22,6 +22,7 @@ body {
 
 .linksNav{
   	color: rgb(174, 165, 2) !important;
+    margin: 0 5px 0 5px;
 }
 
 .linksNav:hover{

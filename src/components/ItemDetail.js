@@ -4,7 +4,7 @@ import { ItemCount } from './ItemCount';
 export const ItemDetail = ({productos}) => {
 
     const onAdd = (cantidad) => {
-        console.log(cantidad);
+        console.log(cantidad + productos.nombre);
     }
 
     return (
