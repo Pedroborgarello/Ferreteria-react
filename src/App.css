@@ -39,6 +39,11 @@ body {
     transform: scale(1.03);
 }
 
+.greeting{
+    text-align: center;
+    margin-top: 11px;
+}
+
 .productosContainer{
     display: flex;
     flex-direction: row;
@@ -47,8 +52,6 @@ body {
 
 .itemCount{
     width: 200px;
-    /* height: 120px; */
-    /* background-color: rgb(220, 220, 220); */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -58,7 +61,8 @@ body {
 }
 
 .itemCount p {
-    font-size: 22px;
+    font-size: 17px;
+    color: rgb(167, 161, 49);
 }
 
 .divCantidad {
@@ -96,7 +100,7 @@ body {
     color: rgb(200, 200, 200);
 }
 
-.itemCount button {
+.btAgregar {
     width: 85%;
     height: 37px;
     font-size: 25px;
@@ -108,9 +112,17 @@ body {
     transition: 0.3s;
 }
 
-/* .itemCount button:hover{
-    background-color: rgb(218, 218, 218);
-} */
+.btTerminar {
+    width: auto;
+    height: 37px;
+    font-size: 25px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s;
+}
 
 .cardProducto{
     width: 240px;

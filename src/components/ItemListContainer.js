@@ -9,10 +9,6 @@ export const ItemListContainer = ({greeting}) => {
     const [loading, setLoading] = useState(true)
     const { idCategoria } = useParams()
 
-    // const onAdd = (cantidad) => {
-    //     console.log(cantidad);
-    // }
-
     useEffect(() => {
         
         if (idCategoria) {
@@ -35,11 +31,10 @@ export const ItemListContainer = ({greeting}) => {
 
     return (
         <div>
-            <h1>{greeting}</h1>
+            <h1 className='greeting'>{greeting}</h1>
             <div className='productosContainer'>
                 { loading ? <h2>Cargando..</h2> : <ItemList productos={productos} />}
             </div>
-            {/* <ItemCount stock={7} initial={1} onAdd={onAdd}/> */}
         </div>
     );
 }

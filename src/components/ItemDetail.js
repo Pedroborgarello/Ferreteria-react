@@ -1,7 +1,8 @@
-
+import { useState } from 'react';
 import { ItemCount } from './ItemCount';
 
 export const ItemDetail = ({productos}) => {
+    const [cantidadSelc, setCantidadSelec] = useState(0)
 
     const onAdd = (cantidad) => {
         console.log(cantidad + productos.nombre);
@@ -13,7 +14,7 @@ export const ItemDetail = ({productos}) => {
             <div className='cardFooter'>
                 <p>{productos.nombre}</p>
                 <p>${productos.precio}</p>
-                <ItemCount stock={7} initial={1} onAdd={onAdd} />
+                <ItemCount stock={productos.stock} initial={1} onAdd={onAdd} />
             </div>
         </div>
     )
