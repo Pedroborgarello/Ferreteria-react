@@ -31,9 +31,14 @@ export const ItemCount = ({stock, initial, onAdd}) => {
             { cambiarButton ?
                 <button className='btAgregar' onClick={agregarCarrito}>Agregar al Carrito</button>
                 :
-                <Link to={'/cart'}>
-                    <button className='btTerminar'>Terminar Compra</button>
-                </Link>     
+                <>    
+                    <Link to={'/cart'}>
+                        <button className='btTerminar'>Terminar Compra</button>
+                    </Link>
+                    <Link to={'/'}>
+                        <button className='btTerminar'>Seguir Comprando</button>
+                    </Link>
+                </>
             }
             <div className='stock'>
                 <p>{stock} unidades disponibles</p>

@@ -4,8 +4,12 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import { CartWidget } from './CartWidget';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../context/cartContext';
 
 export const NavBar = () => {
+    
+    const { iconCart } = useCartContext()
+    
     return (
         <div>
             <Navbar className="navBar" bg="dark" variant="dark">
@@ -24,7 +28,10 @@ export const NavBar = () => {
                             <Nav className="linksNav" >Seguridad</Nav>
                         </Link>
                     </Nav>
-                    <CartWidget />
+                    <Link exact to='/cart'>
+                        {iconCart()}
+                        <CartWidget />
+                    </Link>
                 </Container>
             </Navbar>
         </div>
