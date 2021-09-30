@@ -29,8 +29,7 @@ export const NavBar = () => {
                         </Link>
                     </Nav>
                     <Link exact to='/cart'>
-                        {iconCart()}
-                        <CartWidget />
+                        <CartWidget iconCart={iconCart()}/>
                     </Link>
                 </Container>
             </Navbar>

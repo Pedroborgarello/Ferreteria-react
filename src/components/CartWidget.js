@@ -1,6 +1,6 @@
-export const CartWidget = () => {
+export const CartWidget = ({iconCart}) => {
     return (
-        <div className="cartWidget">
+        <div className="cartWidget" style={ {display: (iconCart === 0) ? "none" : "flex" } }>
             <img
                 alt="logo"
                 src="https://i.ibb.co/XkPbBpy/carrito-ferreteria-amarillo.png"
@@ -8,6 +8,7 @@ export const CartWidget = () => {
                 height="45"
                 className="d-inline-block aling-top"
             />
+            <p>{iconCart}</p>
         </div>
     );
 }
