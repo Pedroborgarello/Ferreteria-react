@@ -28,7 +28,7 @@ export const NavBar = () => {
                             <Nav className="linksNav" >Seguridad</Nav>
                         </Link>
                     </Nav>
-                    <Link exact to='/cart'>
+                    <Link to='/cart'>
                         <CartWidget iconCart={iconCart()}/>
                     </Link>
                 </Container>

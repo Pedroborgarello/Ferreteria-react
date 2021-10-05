@@ -18,6 +18,8 @@ export const ItemDetail = ({productos}) => {
             <div className='cardFooter'>
                 <p>{productos.nombre}</p>
                 <p>${productos.precio}</p>
+                <p>descripcion:</p>
+                <p>{productos.descripcion}</p>
                 <ItemCount stock={productos.stock} initial={1} onAdd={onAdd} />
             </div>
         </div>

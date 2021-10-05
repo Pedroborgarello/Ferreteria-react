@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getFetch } from '../utils/Mock';
-// import { ItemCount } from './ItemCount';
+import { getFirestore } from '../services/getFirebase';
+// import { getFetch } from '../utils/Mock';
 import { ItemList } from './ItemList';
 
 export const ItemListContainer = ({greeting}) => {
@@ -12,20 +12,40 @@ export const ItemListContainer = ({greeting}) => {
     useEffect(() => {
         
         if (idCategoria) {
-            getFetch
-                .then(res => {
-                    setProductos(res.filter(producto => producto.categoria === idCategoria ))
-                })
-                .catch(err => console.log(err))
-                .finally(() => setLoading(false))
-        } else {
-            getFetch
+            const dbQuery = getFirestore()
+            dbQuery.collection('productos').where('categoria', '==', idCategoria).get()
             .then(res => {
-                setProductos(res)
+                setProductos( res.docs.map( productos => ( { id: productos.id, ...productos.data() } ))) 
+            })
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+        } else {
+            const dbQuery = getFirestore()
+            dbQuery.collection('productos').get()
+            .then(res => {
+                setProductos(res.docs.map(productos => ({ id: productos.id, ...productos.data() })))
             })
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
         }
+            
+
+        ////////////////////////
+        // if (idCategoria) {
+        //     getFetch
+        //         .then(res => {
+        //             setProductos(res.filter(producto => producto.categoria === idCategoria ))
+        //         })
+        //         .catch(err => console.log(err))
+        //         .finally(() => setLoading(false))
+        // } else {
+        //     getFetch
+        //     .then(res => {
+        //         setProductos(res)
+        //     })
+        //     .catch(err => console.log(err))
+        //     .finally(() => setLoading(false))
+        // }
         
     }, [idCategoria])
 

@@ -16,3 +16,4 @@ export const getFetch = new Promise ((res) => {
     }, 3000)
 
 })
+
