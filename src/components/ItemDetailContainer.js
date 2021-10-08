@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getFirestore } from "../services/getFirebase"
-import { getFetch } from "../utils/Mock"
+// import { getFetch } from "../utils/Mock"
 import { ItemDetail } from "./ItemDetail"
  
 

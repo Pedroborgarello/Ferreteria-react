@@ -33,10 +33,24 @@ body {
     cursor: pointer;
     transition: 0.3s;
     position: relative;
+    display: flex;
 }
 
 .cartWidget:hover{
     transform: scale(1.03);
+}
+
+.cartWidget p {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+    position: relative;
+    right: 10px;
+    color: rgb(33, 37, 41);
+    background-color: rgb(232, 221, 25);
+    border: solid 0.5px rgb(100, 100, 100);
+    border-radius: 50%;
+    text-align: center;
 }
 
 .greeting{
@@ -63,6 +77,64 @@ body {
 .itemCount p {
     font-size: 17px;
     color: rgb(167, 161, 49);
+}
+
+.cartContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* .cartContainer a{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+} */
+
+.itemCart{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: rgb(223, 216, 76);
+    border-radius: 5px;
+    border: solid 0.5px rgb(33, 37, 41);
+    font-size: 27px;
+}
+
+.itemCart p{
+    margin: 0;
+}
+
+.itemCart img {
+    border-radius: 5px;
+}
+
+.itemNombre{
+    width: 100px;
+}
+
+.itemCart button {
+    position: relative;
+    right: -20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(33, 37, 41);
+    color: rgb(240, 229, 12);
+    border: solid 0.5px rgb(100, 100, 100);
+    font-size: 20px;
 }
 
 .divCantidad {
@@ -143,7 +215,6 @@ body {
 
 .cardProducto:hover {
     box-shadow: 1px 1px 10px 1px rgb(100, 100, 100);
-    /* transform: scale(1.005); */
 }
 
 .cardImage {

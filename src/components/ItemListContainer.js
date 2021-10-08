@@ -28,24 +28,6 @@ export const ItemListContainer = ({greeting}) => {
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
         }
-            
-
-        ////////////////////////
-        // if (idCategoria) {
-        //     getFetch
-        //         .then(res => {
-        //             setProductos(res.filter(producto => producto.categoria === idCategoria ))
-        //         })
-        //         .catch(err => console.log(err))
-        //         .finally(() => setLoading(false))
-        // } else {
-        //     getFetch
-        //     .then(res => {
-        //         setProductos(res)
-        //     })
-        //     .catch(err => console.log(err))
-        //     .finally(() => setLoading(false))
-        // }
         
     }, [idCategoria])
 

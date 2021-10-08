@@ -1,6 +1,6 @@
 export const CartWidget = ({iconCart}) => {
     return (
-        <div className="cartWidget" style={ {display: (iconCart === 0) ? "none" : "flex" } }>
+        <div className="cartWidget">
             <img
                 alt="logo"
                 src="https://i.ibb.co/XkPbBpy/carrito-ferreteria-amarillo.png"
@@ -8,7 +8,7 @@ export const CartWidget = ({iconCart}) => {
                 height="45"
                 className="d-inline-block aling-top"
             />
-            <p>{iconCart}</p>
+            <p style={{ opacity: (iconCart === 0) ? "0" : "1" }}>{iconCart}</p>
         </div>
     );
 }

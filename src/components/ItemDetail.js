@@ -8,7 +8,6 @@ export const ItemDetail = ({productos}) => {
     const {addToCart} = useCartContext()
 
     const onAdd = (cantidad) => {
-        console.log(cantidad + productos.nombre);
         addToCart({producto: productos, cantidad: cantidad})
     }
 
