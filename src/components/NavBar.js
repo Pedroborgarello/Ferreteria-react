@@ -24,9 +24,6 @@ export const NavBar = () => {
                         <Link to='/categoria/electricas'>
                             <Nav className="linksNav">Herramientas Eléctricas</Nav>
                         </Link>
-                        <Link to='/categoria/seguridad'>
-                            <Nav className="linksNav" >Seguridad</Nav>
-                        </Link>
                     </Nav>
                     <Link to='/cart'>
                         <CartWidget iconCart={iconCart()}/>

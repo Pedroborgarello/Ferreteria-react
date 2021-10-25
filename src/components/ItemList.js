@@ -1,4 +1,6 @@
-import { Item } from "./Item";
+
+
+import { Item } from "./Item"
 
 
 export const ItemList = ({productos}) => {

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getFirestore } from '../services/getFirebase';
-// import { getFetch } from '../utils/Mock';
 import { ItemList } from './ItemList';
+
 
 export const ItemListContainer = ({greeting}) => {
     const [productos, setProductos] = useState([])
@@ -35,8 +35,19 @@ export const ItemListContainer = ({greeting}) => {
         <div>
             <h1 className='greeting'>{greeting}</h1>
             <div className='productosContainer'>
-                { loading ? <h2>Cargando..</h2> : <ItemList productos={productos} />}
+                {loading ?  <div className="contenedorLoader">
+                                <div className="loader">
+                                    <img className="img1" src="https://i.ibb.co/ky3bVwM/tuerca.png" alt="tuerca1" />
+                                    <img className="img2" src="https://i.ibb.co/ky3bVwM/tuerca.png" alt="tuerca2" />
+                                    <img className="img3" src="https://i.ibb.co/ky3bVwM/tuerca.png" alt="tuerca3" />
+                                    <p className='loading'>cargando . . .</p>
+                                </div>
+                            </div> 
+                            : 
+                            <ItemList productos={productos} />}
             </div>
         </div>
     );
+    
+        
 }

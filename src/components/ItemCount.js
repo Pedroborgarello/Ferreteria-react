@@ -19,9 +19,13 @@ export const ItemCount = ({stock, initial, onAdd}) => {
     }
 
     const agregarCarrito = () => {
-        onAdd(count);
-        setCambiarbutton(false);
+        
+        if (stock !== 0) {
+            onAdd(count);
+            setCambiarbutton(false);
+        }
     }
+        
 
     return (
         <div className="itemCount">
@@ -41,7 +45,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
                 </>
             }
             <div className='stock'>
-                <p>{stock} unidades disponibles</p>
+                {stock === 0 ? <p>no hay unidades disponibles</p> : <p>{stock} unidades disponibles</p>}
             </div>
         </div>
     );

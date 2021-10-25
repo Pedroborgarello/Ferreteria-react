@@ -1,25 +1,31 @@
-import { useState } from 'react';
+
 import { useCartContext } from '../context/cartContext';
 import { ItemCount } from './ItemCount';
 
 export const ItemDetail = ({productos}) => {
-    const [cantidadSelc, setCantidadSelec] = useState(0)
 
     const {addToCart} = useCartContext()
 
     const onAdd = (cantidad) => {
         addToCart({producto: productos, cantidad: cantidad})
+
     }
 
     return (
-        <div key={productos.id} className='cardProducto'>
-            <img className='cardImage' src={productos.image} alt='imagen' />
-            <div className='cardFooter'>
-                <p>{productos.nombre}</p>
-                <p>${productos.precio}</p>
-                <p>descripcion:</p>
-                <p>{productos.descripcion}</p>
-                <ItemCount stock={productos.stock} initial={1} onAdd={onAdd} />
+        <div className='containerDetail'>
+            <div key={productos.id} className='cardDetailProducto'>
+                <div className='containerDetailImage'>
+                    <img className='cardDetailImage' src={productos.image} alt='imagen' />
+                </div>
+                <div className='cardDetailFooter'>
+                    <h2>{productos.nombre}</h2>
+                    <p className='detailPrice'>${productos.precio}</p>
+                    <div className='detailDescription'>
+                        <h3 style={{ fontSize: 30 }}>descripción: </h3>
+                        <p style={{fontSize: 20}}>{productos.descripcion}</p>
+                    </div>
+                    <ItemCount stock={productos.stock} initial={productos.stock !== 0 ? 1 : 0} onAdd={onAdd} />
+                </div>
             </div>
         </div>
     )
